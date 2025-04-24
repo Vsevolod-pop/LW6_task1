@@ -3,7 +3,6 @@
 #include <vector>
 
 using namespace std;
-
 int CheckNumber(int f);
 struct Exam
 {
@@ -17,7 +16,7 @@ struct Student
 	string Patronymic;
 	Exam Exams;
 };
-typedef vector<Student> vStudent;
+typedef vector <Student> vStudent;
 struct University
 {
 	vStudent list_student;

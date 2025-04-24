@@ -2,9 +2,9 @@
 
 int CheckNumber(int f)
 {
-	int flag = 0;
 	string stroka;
 	int K;
+	int flag = 0;
 	if (f == 0)
 	{
 		cout << "Введите число экзаменов - ";
@@ -12,7 +12,6 @@ int CheckNumber(int f)
 	else
 	{
 		cout << "Введите число студентов - ";
-		flag = 1;
 	}
 	cin >> stroka;
 	while (true)
@@ -20,29 +19,14 @@ int CheckNumber(int f)
 		try
 		{
 			K = stoi(stroka);
-			if (flag == 1)
+			if ((to_string(K) == stroka) and (K <= 100) and (K >= 1))
 			{
-				if ((to_string(K) == stroka) and (K <= 100) and (K > 0))
-				{
-					return K;
-				}
-				else
-				{
-					throw logic_error("Число введено некорректно");
-				}
+				return K;
 			}
 			else
 			{
-				if ((to_string(K) == stroka) and (K <= 100) and (K >= 0))
-				{
-					return K;
-				}
-				else
-				{
-					throw logic_error("Число введено некорректно");
-				}
+				throw logic_error("Число введено некорректно");
 			}
-			
 		}
 		catch (...)
 		{

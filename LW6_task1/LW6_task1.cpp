@@ -11,6 +11,7 @@ int main()
 	CoutUniversity(DGTU);
 	cout << "__________________________________" << endl << endl;
 	CoutUniversity(DGTU_Sorted);
+
 }
 
 
